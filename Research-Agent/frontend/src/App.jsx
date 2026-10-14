@@ -16,7 +16,7 @@ export default function App() {
 
   const run = async () => {
     setLoading(true); setData(null);
-    const res = await fetch("http://localhost:8000/research", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/research`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
